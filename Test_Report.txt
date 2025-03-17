@@ -1,0 +1,31 @@
+=== Cucumber Test Report ===
+
+Scenario: Launch the app and navigate to email registration
+    Given I click on Greener Herd app [passed]
+    Then I see the splash screen [passed]
+    And I see the Welcome popup [passed]
+    When I click Continue with Email [passed]
+Status: passed
+Execution Time: 17.21 seconds
+--------------------------------------------------
+
+Scenario: Navigate to Login Screen
+    Given I am on the login with email screen [passed]
+    When I enter a valid email address vraj@yopmail.com [passed]
+    And I enter a valid password Test@123 [passed]
+    And I click on Login [passed]
+Status: passed
+Execution Time: 18.74 seconds
+--------------------------------------------------
+
+Scenario: Dashboard
+    Given the user is on the Dashboard page. [passed]
+    When the I clicks on the Menu button. [passed]
+    When the I clicks on the My Profile button. [passed]
+    When the I clicks on the Complete Profile Now button. [passed]
+    Given the I click and enters a new name VrajMakwana in the First Name field. [passed]
+    Then the I clicks on the Save button to save the changes. [passed]
+Status: passed
+Execution Time: 44.78 seconds
+--------------------------------------------------
+
