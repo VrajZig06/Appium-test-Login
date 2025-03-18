@@ -10,7 +10,7 @@ Feature: Farm Login
   Scenario: Navigate to Login Screen
     Given I am on the login with email screen
     When I enter a valid email address vraj@yopmail.com
-    And I enter a valid password Test@123
+    And I enter a valid password Vraj@123
     And I click on Login 
 
   Scenario: Dashboard
@@ -20,5 +20,8 @@ Feature: Farm Login
     When the I clicks on the Complete Profile Now button.
     When the I click and enters a new name Vrajtest in the First Name field.
     When I scroll down the screen
-    Then the I clicks on the Save button to save the changes.
+    When the I clicks on the Save button to save the changes.
+    When I am at My Profile page
+    Then I show Updated name at Profile Page
+
 

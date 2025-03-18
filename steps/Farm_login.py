@@ -121,7 +121,7 @@ def step_impl(context):
     scroll_down()
     time.sleep(5)
 
-@then("the I clicks on the Save button to save the changes.")
+@when("the I clicks on the Save button to save the changes.")
 def step_impl(context):
 
     driver = get_driver_instance(context)
@@ -130,5 +130,19 @@ def step_impl(context):
     save = driver.find_element(AppiumBy.ACCESSIBILITY_ID,'on_tap\nSave')
     time.sleep(2)
     save.click()
+    time.sleep(2)
+
+@when("I am at My Profile page")
+def step_impl(context):
+    driver = get_driver_instance(context)
+    time.sleep(3)
+    driver.find_element(AppiumBy.ACCESSIBILITY_ID,"My Profile")
+    time.sleep(2)
+
+@then("I show Updated name at Profile Page")
+def step_impl(context):
+    driver = get_driver_instance(context)
+    time.sleep(3)
+    driver.find_element(AppiumBy.ACCESSIBILITY_ID,"Vrajtest, ")
     time.sleep(2)
 
