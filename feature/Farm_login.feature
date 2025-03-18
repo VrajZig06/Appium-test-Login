@@ -18,6 +18,7 @@ Feature: Farm Login
     When the I clicks on the Menu button.
     When the I clicks on the My Profile button.
     When the I clicks on the Complete Profile Now button.
-    Given the I click and enters a new name VrajMakwana in the First Name field.
+    When the I click and enters a new name Vrajtest in the First Name field.
+    When I scroll down the screen
     Then the I clicks on the Save button to save the changes.
 

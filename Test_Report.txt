@@ -6,7 +6,7 @@ Scenario: Launch the app and navigate to email registration
     And I see the Welcome popup [passed]
     When I click Continue with Email [passed]
 Status: passed
-Execution Time: 17.21 seconds
+Execution Time: 17.68 seconds
 --------------------------------------------------
 
 Scenario: Navigate to Login Screen
@@ -15,7 +15,7 @@ Scenario: Navigate to Login Screen
     And I enter a valid password Test@123 [passed]
     And I click on Login [passed]
 Status: passed
-Execution Time: 18.74 seconds
+Execution Time: 19.21 seconds
 --------------------------------------------------
 
 Scenario: Dashboard
@@ -23,9 +23,10 @@ Scenario: Dashboard
     When the I clicks on the Menu button. [passed]
     When the I clicks on the My Profile button. [passed]
     When the I clicks on the Complete Profile Now button. [passed]
-    Given the I click and enters a new name VrajMakwana in the First Name field. [passed]
+    When the I click and enters a new name Vrajtest in the First Name field. [passed]
+    When I scroll down the screen [passed]
     Then the I clicks on the Save button to save the changes. [passed]
 Status: passed
-Execution Time: 44.78 seconds
+Execution Time: 52.72 seconds
 --------------------------------------------------
 

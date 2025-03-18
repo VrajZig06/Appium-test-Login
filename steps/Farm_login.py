@@ -94,7 +94,7 @@ def step_impl(context):
 
 
 
-@given("the I click and enters a new name {name} in the First Name field.")
+@when("the I click and enters a new name {name} in the First Name field.")
 def step_impl(context,name):
     driver = get_driver_instance(context)
     firstNameField = driver.find_element(AppiumBy.XPATH, '//android.widget.EditText[@resource-id="first name"]')
@@ -107,6 +107,19 @@ def step_impl(context,name):
     time.sleep(2)
     driver.hide_keyboard()
     time.sleep(2)
+
+@when('I scroll down the screen')
+def step_impl(context):
+    driver = context.driver
+    # Use execute_script to perform a mobile scroll
+    def scroll_down():
+        driver.execute_script("mobile: scrollGesture", {
+            "left": 100, "top": 100, "width": 200, "height": 1200,
+            "direction": "down",
+            "percent": 6.0
+        })
+    scroll_down()
+    time.sleep(5)
 
 @then("the I clicks on the Save button to save the changes.")
 def step_impl(context):
